@@ -13,13 +13,15 @@ renderer.shadowMap.enabled = true; // Enable shadows
 renderer.setSize(window.innerWidth, window.innerHeight); // Match screen size
 document.body.appendChild(renderer.domElement); // Add the renderer to the DOM
 
+/**
+ * Create the scene and camera
+ */
 const scene = new THREE.Scene();
-
 const camera = new THREE.PerspectiveCamera(
-    45,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
+    45, // Field of view
+    window.innerWidth / window.innerHeight, // Aspect ratio
+    0.1, // Near clipping plane
+    1000 // Far clipping plane
 );
 
 const orbit = new OrbitControls(camera, renderer.domElement);
