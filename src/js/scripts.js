@@ -34,8 +34,11 @@ const orbit = new OrbitControls(camera, renderer.domElement);
  */
 const axesHelper = new THREE.AxesHelper(5); // Axes helper
 scene.add(axesHelper);
+/**
+ * Position the camera
+ */
 camera.position.set(-10, 30, 30);
-orbit.update();
+orbit.update(); // Update the controls with the new camera position
 
 const boxGeometry = new THREE.BoxGeometry();
 const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00FF00});
