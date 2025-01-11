@@ -24,11 +24,16 @@ const camera = new THREE.PerspectiveCamera(
     1000 // Far clipping plane
 );
 
+/**
+ * Add orbit controls for camera interaction
+ */
 const orbit = new OrbitControls(camera, renderer.domElement);
 
-const axesHelper = new THREE.AxesHelper(5);
+/**
+ * Add helpers (axes and grid)
+ */
+const axesHelper = new THREE.AxesHelper(5); // Axes helper
 scene.add(axesHelper);
-
 camera.position.set(-10, 30, 30);
 orbit.update();
 
