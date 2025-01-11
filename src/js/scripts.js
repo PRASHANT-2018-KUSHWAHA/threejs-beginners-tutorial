@@ -40,15 +40,20 @@ scene.add(axesHelper);
 camera.position.set(-10, 30, 30);
 orbit.update(); // Update the controls with the new camera position
 
+/**
+ * Add basic objects to the scene
+ */
+// Green Box
 const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00FF00});
+const boxMaterial = new THREE.MeshBasicMaterial({ color: 0x00FF00 });
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
 
+// Plane
 const planeGeometry = new THREE.PlaneGeometry(30, 30);
 const planeMaterial = new THREE.MeshStandardMaterial({
     color: 0xFFFFFF,
-    side: THREE.DoubleSide
+    side: THREE.DoubleSide,
 });
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 scene.add(plane);
