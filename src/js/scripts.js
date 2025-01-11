@@ -9,12 +9,9 @@ import stars from '../img/stars.jpg';
 const monkeyUrl = new URL('../assets/monkey.glb', import.meta.url);
 
 const renderer = new THREE.WebGLRenderer();
-
-renderer.shadowMap.enabled = true;
-
-renderer.setSize(window.innerWidth, window.innerHeight);
-
-document.body.appendChild(renderer.domElement);
+renderer.shadowMap.enabled = true; // Enable shadows
+renderer.setSize(window.innerWidth, window.innerHeight); // Match screen size
+document.body.appendChild(renderer.domElement); // Add the renderer to the DOM
 
 const scene = new THREE.Scene();
 
